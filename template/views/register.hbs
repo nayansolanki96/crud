@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+
+
+
+
+
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="css/style.css">
+<div class="container">
+
+
+
+
+    {{>navbar}}
+
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Create Account</h4>
+
+
+            <form action="/register" method="post">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="fname" class="form-control" placeholder="Full name" type="text" required>
+                </div> <!-- form-group// --> 
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input name="email" class="form-control" placeholder="Email address" type="email" required>
+                </div> <!-- form-group// -->
+
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                    <input name="phone" class="form-control" maxlength="10" placeholder="Phone number" type="number"
+                        required>
+
+                </div>
+                <br>
+
+
+                <div>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label class="radio-inline">
+                        <i class="fa fa-user"></i> &nbsp;male
+                        <input type="radio" name="gender" value="male" checked>
+                    </label> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label class="radio-inline">
+                        <i class="fa fa-user"></i> &nbsp;Female
+                        <input type="radio" name="gender" value="female">
+                    </label>
+
+
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Create password" type="password" name="password" required>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Confirm password" type="password" name="confirmpass"
+                        required>
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> submit </button>
+
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a href="/login">Log In</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// 
+
+</div>
+<!--container end.//--> 
